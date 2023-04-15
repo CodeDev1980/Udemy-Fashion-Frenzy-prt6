@@ -8,11 +8,14 @@
         <% for(i=0; i < blogs.length; i++){ %>
 
             <!-- Grid column -->
-            <div class="col-lg-5 col-xl-4">
+            <div class="col-lg-5 col-xl-4 mb-3">
 
                 <!-- Featured image -->
                 <div class="view overlay rounded z-depth-1-half mb-lg-0 mb-4">
-                    <img class="img-fluid"
+                    <img class="img-thumbnail"
+                         loading="lazy"
+                         height="310"
+                         width="290"
                          src="<%= blogs[i].image %>"
                          alt="<%= blogs[i].title %>">
                     <a>
@@ -24,7 +27,7 @@
             <!-- Grid column -->
 
             <!-- Grid column -->
-            <div class="col-lg-7 col-xl-8">
+            <div class="col-lg-7 col-xl-8 mb-3">
 
                 <!-- Post title -->
                 <h4 class="font-weight-bold mb-3"><strong><%= blogs[i].title %></strong></h4>

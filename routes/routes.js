@@ -5,6 +5,8 @@ const aboutController = require('../controllers/aboutPage');
 const contactController = require('../controllers/contactPage');
 const mailSenderController = require('../controllers/mail');
 const storeController = require('../controllers/galleryPage');
+// products
+const productController = require('../controllers/productPage');
 // User DB
 const registerController = require('../controllers/register');
 const storeUserController = require('../controllers/StoreUser');
@@ -35,6 +37,8 @@ router.get('/contact', contactController);
 // posting contact form data code block goes here//////////
 router.post('/form/send', mailSenderController)
 router.get('/gallery', storeController);
+// products
+router.get('/product', productController);
 // User DB
 router.get('/register', registerController);
 router.post('/store/user', storeUserController);

@@ -16,7 +16,7 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-        height: 60vh;
+        height: 40vh;
       ">
             <div class="mask h-100" style="background-color: rgba(0, 0, 0, 0.6);">
                 <div class="container d-flex justify-content-center align-items-center h-100">
@@ -39,13 +39,13 @@
 </header>
 
 <main>
-    <div class="container my-4 py-5">
+    <div class="container mt-5">
         <!--Section: Design Block-->
         <section>
             <div class="row">
                 <% for(i=0; i < blogs.length; i++){ %>
                     <div class="col-md-12">
-                        <div class="row flex-row-reverse mb-5">
+                        <div class="row flex-row-reverse">
                             <div class="col-md-8">
                                 <h5 class="fw-bold pb-1">
                                     <a href="/post/<%= blogs[i]._id %>" class="text-reset"

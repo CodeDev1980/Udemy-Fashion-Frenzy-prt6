@@ -7,7 +7,7 @@
 .section {
     background-image: linear-gradient(176deg, #DB8C44 70%, #ffffff calc(70% + 2px));
     padding-top: 90px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
 }
 .line-white {
     border: 1px solid white;
@@ -20,7 +20,7 @@
     margin-right: auto;
 }
 .intro-text {
-    color: #f4f4f4;
+    color: #000000;
 }
 .btn-outline-brown {
     border:1px solid saddlebrown;
