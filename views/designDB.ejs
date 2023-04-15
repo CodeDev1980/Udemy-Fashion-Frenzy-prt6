@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header') -%>
+<body>
+<header>
+    <!-- Navbar -->
+    <%- include('partials/navBar') -%>
+    <!-- Navbar -->
+
+    <!--Section: Design Block-->
+    <section>
+        <div id="intro" class="bg-image" style="
+                background: url('<%= singleDesign.image %>') no-repeat center center;
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                height: 40vh;
+                ">
+            <div class="mask h-100" style="background-color: rgba(0, 0, 0, 0.6);">
+                <div class="container d-flex justify-content-center align-items-center h-100">
+                    <div class="row align-items-center">
+                        <div class="col-12 text-center p-3">
+                            <nav aria-label="breadcrumb" style="opacity: 0.7;">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="/designs" class="fw-bold text-white">All Designs</a></li>
+                                    <li class="breadcrumb-item text-white-50" aria-current="page"><%= singleDesign.title %></li>
+                                </ol>
+                            </nav>
+                            <h1 class="text-white text-center display-3">
+                                <%= singleDesign.title %>
+                            </h1>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Section: Design Block-->
+</header>
+
+<main>
+    <div class="container my-5 py-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-8">
+
+                <!--Section: Design Block-->
+                <section>
+                    <div class="d-md-flex justify-content-between mb-3">
+                        <p class="text-muted mb-2 mb-md-3"><span>Published <%= singleDesign.datePosted.toLocaleString() %></span></p>
+                        <div class="d-flex flex-row mb-4 mb-md-0 pb-2 pb-md-0">
+                            <p class="text-muted mb-0 me-2">Share this article</p>
+                            <a href="#!" class="link-info"><i class="fas fa-share me-2"></i></a>
+                            <a href="#!" class="link-info"><i class="fab fa-facebook me-2"></i></a>
+                            <a href="#!" class="link-info"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <h2 class="mb-0 pb-4 h1" style="border-bottom: 2px #f5f5f5 solid;"> <%= singleDesign.title %></h2>
+                    <div class="mt-5">
+                        <p class="mb-3"><%= singleDesign.body %>.</p>
+                        <% if(loggedIn) { %>
+                            <a href="/delete/post/<%= singleDesign._id %>" class="btn mb-5 btn-warning rounded-pill"> Delete </a>
+                        <% } %>
+                        <hr class="divider-horizontal" style="margin-bottom: 2rem;">
+                        <div class="p-4 bg-light rounded-6">
+                            <div class="row">
+                                <div class="col-6 col-md-3 col-xl-2 mb-4 mb-md-0 mx-auto">
+                                    <img class="w-100 rounded-circle" src="https://media.istockphoto.com/id/1278009593/photo/young-man-using-smart-phone-at-home.jpg?s=612x612&w=0&k=20&c=eErVmquQwbbLsP7Oauw-2pvM6y0icEQv2v1qzDqBx6o=" alt="Author image">
+                                </div>
+                                <div class="col-md-9 col-xl-10">
+                                    <% if(loggedIn &&  singleDesign.userid.username) { %>
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="pb-1">Welcome Member</h5>
+                                            <div>
+                                                <a href="mailto:stephenbrooks714@gmail.com" class="link-info">Support<i class="far fa-envelope"></i></a>
+                                            </div>
+                                        </div>
+                                        <p>
+                                            What Would You Like To Do?
+                                        </p>
+                                        <div class="row">
+                                            <div class="col-md-6 text-start">
+                                                <a href="/create">Write</a> a new blog to share with the community?
+                                            </div>
+                                            <div class="col-md-6 text-start">
+                                                <a href="/createDesign">Upload</a> a new fashion design to show everyone?
+                                            </div>
+                                        </div>
+                                    <% } else { %>
+                                        <p class="text-muted">Posted By</p>
+                                        <div class="d-flex justify-content-between">
+                                            <h5 class="pb-1"><%= singleDesign.userid.username %></h5>
+
+                                            <div>
+                                                <a href="mailto:<%= singleDesign.userid.email %>" class="link-info"><i class="far fa-envelope"></i></a>
+                                            </div>
+                                        </div>
+                                        <p class="text-muted fst-italic mb-0"><%= singleDesign.userid.about.substring(0, 110) %> . . .
+                                            <a class="fw-bold text-black-50 text-decoration-underline" href="/profile/<%= singleDesign.userid._id %>">View My Profile</a>
+                                        </p>
+                                    <% } %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--Section: Design Block-->
+
+            </div>
+        </div>
+    </div>
+    <!-- Container for demo purpose -->
+</main>
+
+<%- include('partials/footer') -%>
+</body>
+<%- include('partials/scripts') -%>
+</html>

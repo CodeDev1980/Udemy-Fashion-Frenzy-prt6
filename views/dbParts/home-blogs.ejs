@@ -1,59 +1,24 @@
-<h2 class="display-4 fw-bold mt-5">Our Latest Designs</h2>
-<div class="row text-center mt-3">
-    <div class="col-lg-3 col-md-6 p-3">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+<h2 class="display-4 fw-bold mt-5 mb-4">Our Latest Designs
+    <a href="/designs" style="padding-left: 20%;">
+        <img src="/images/viewMore.png" height="40" width="170" loading="lazy" alt="view more">
+    </a>
+</h2>
+
+<div class="row row-cols-auto justify-content-center align-items-center d-flex mx-auto py-2 me-3 text-center">
+    <% for(i=0; i < design.length; i++){ %>
+    <div class="col">
+        <div>
+            <img src="<%= design[i].image %>"
                  loading="lazy"
-                 class="card-header-pills rounded shadow-lg"
-                 alt="img">
+                 class="img-fluid rounded shadow-lg"
+                 alt="<%= design[i].title %>">
             <div class="card-body">
                 <p>
-                    <span class="h3">Summary</span> <br>
-                    text and subtitle to this section card.
+                    <span class="h3"><%= design[i].title %></span> <br>
+                    Posted On <%= design[i].datePosted.toLocaleString() %>
                 </p>
             </div>
         </div>
     </div>
-    <div class="col-lg-3 col-md-6 p-3">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                 loading="lazy"
-                 class="card-header-pills rounded shadow-lg"
-                 alt="img">
-            <div class="card-body">
-                <p>
-                    <span class="h3">Summary</span> <br>
-                    text and subtitle to this section card.
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6 p-3">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                 loading="lazy"
-                 class="card-header-pills rounded shadow-lg"
-                 alt="img">
-            <div class="card-body">
-                <p>
-                    <span class="h3">Summary</span> <br>
-                    text and subtitle to this section card.
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-6 p-3">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-                 loading="lazy"
-                 class="card-header-pills rounded shadow-lg"
-                 alt="img">
-            <div class="card-body">
-                <p>
-                    <span class="h3">Summary</span> <br>
-                    text and subtitle to this section card.
-                </p>
-            </div>
-        </div>
-    </div>
+    <% } %>
 </div>

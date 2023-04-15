@@ -19,6 +19,12 @@ const storePostController = require('../controllers/StorePost');
 const blogsController = require('../controllers/blogsPage');
 const postController = require('../controllers/singlePost');
 const deletePostController = require('../controllers/deletePost');
+// Designs
+const newDesignController = require('../controllers/newDesign');
+const storeDesignController = require('../controllers/StoreDesign');
+const designsController = require('../controllers/designsPage');
+const singleDesignController = require('../controllers/singleDesign');
+const deleteDesignController = require('../controllers/deleteDesign');
 
 // MiddleWare
 const auth = require('../middlewares/ifAuthorized');
@@ -43,5 +49,11 @@ router.post('/store/post', auth, storePostController);
 router.get('/blogs', blogsController);
 router.get('/post/:id', postController);
 router.get('/delete/post/:id', auth, deletePostController);
+// designs
+router.get('/createDesign', newDesignController);
+router.post('/store/design', storeDesignController);
+router.get('/designs', designsController);
+router.get('/designDB/:id', singleDesignController);
+router.get('/delete/design', deleteDesignController);
 
 module.exports = router;

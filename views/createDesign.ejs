@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header') -%>
+<body>
+<header>
+    <!-- Navbar -->
+    <%- include('partials/navBar') -%>
+    <!-- Navbar -->
+
+    <!--Section: Design Block-->
+    <section>
+        <div id="intro" class="bg-image" style="
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoKkcXopQYFlkTfViKdRLEegRhtJEyUL_H1w_K24Xe6uEvDfUditseU7Cf6VSvSLakh3U&usqp=CAU') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+        height: 40vh;
+      ">
+            <div class="mask h-100" style="background-color: rgba(0, 0, 0, 0.6);">
+                <div class="container d-flex justify-content-center align-items-center h-100">
+                    <div class="row align-items-center">
+                        <div class="col-12 text-center p-3">
+
+                            <h1 class="text-white display-4">
+                                New Frenzy Design Post
+                            </h1>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Section: Design Block-->
+</header>
+
+<main>
+    <!-- Container for demo purpose -->
+    <div class="container my-5 py-5 shadow-5">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-10">
+                <form action="/store/design" method="post" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="title" class="form-label">Design Title</label>
+                            <input type="text" name="title" class="form-control" required id="title" >
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="image" class="form-label">Design Photo</label>
+                            <input type="file" name="image" class="form-control" accept="image/*" required id="image" >
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="designer" class="form-label">Designer Name</label>
+                            <input type="text" name="designer" class="form-control" required id="designer" >
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="dates" class="form-label">Created Date</label>
+                            <input type="date" name="dates" class="form-control" required id="dates" >
+                        </div>
+                    </div>
+                    <label for="message" class="form-label">Design Description</label>
+                    <textarea name="body" id="message" class="form-control" spellcheck="true" rows="6"></textarea>
+                    <button type="submit" class="btn btn-primary mt-3">submit post</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <!-- Container for demo purpose -->
+</main>
+
+<%- include('partials/footer') -%>
+</body>
+<%- include('partials/scripts') -%>
+</html>
