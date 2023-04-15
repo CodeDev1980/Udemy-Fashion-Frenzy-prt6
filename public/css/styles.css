@@ -31,9 +31,16 @@
     border:1px solid saddlebrown;
     color: white;
 }
+.height {
+    max-height: 120px;
+}
 @media(max-width: 990px){
     #navLogo {
         display: none;
+    }
+    .height {
+        height: 410px;
+        width: 310px;
     }
     #navLogo2 {
         display: block;
@@ -54,5 +61,4 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-
 }

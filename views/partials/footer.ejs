@@ -10,17 +10,22 @@
         </div>
         <div class="col-md-2 p-2 text-center">
             <h3>Pages</h3>
-            <a href="#" class="nav-link">Link</a>
-            <a href="#" class="nav-link">Link</a>
-            <a href="#" class="nav-link">Link</a>
-            <a href="#" class="nav-link">Link</a>
+            <a href="/" class="nav-link">Home</a>
+            <a href="/about" class="nav-link">About</a>
+            <a href="/contact" class="nav-link">Contact</a>
+            <a href="/blogs" class="nav-link">Blogs</a>
         </div>
         <div class="col-md-2 p-2 text-center">
             <h3>Other</h3>
-            <a href="#" class="nav-link">Link</a>
-            <a href="#" class="nav-link">Link</a>
-            <a href="#" class="nav-link">Link</a>
-            <a href="#" class="nav-link">Link</a>
+            <% if(loggedIn){ %>
+                <a href="/create" class="nav-link">New Blog</a>
+                <a href="/createDesign" class="nav-link">New Design</a>
+            <% } else { %>
+                <a href="/register" class="nav-link">Sign Up</a>
+                <a href="/login" class="nav-link">Login Here</a>
+            <% } %>
+            <a href="/designs" class="nav-link">All Designs</a>
+            <a href="mailto:stephenbrooks714@gmail.com" class="nav-link">Tech Support</a>
         </div>
     </div>
 </footer>
