@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header') -%>
+<body>
+<header>
+    <!-- Navbar -->
+    <%- include('partials/navBar') -%>
+    <!-- Navbar -->
+
+    <!--Section: Design Block-->
+    <section>
+        <div id="intro" class="bg-image" style="
+        background-image: url('https://previews.123rf.com/images/rawpixel/rawpixel1607/rawpixel160707354/110546896-person-using-a-laptop-with-account-login-concept.jpg');
+        height: 50vh;
+      ">
+            <div class="mask h-100" style="background-color: rgba(0, 0, 0, 0.6);">
+                <div class="container d-flex justify-content-center align-items-center h-100">
+                    <div class="row align-items-center">
+                        <div class="col-12 text-center p-3">
+
+                            <h1 class="text-white display-2">
+                                User Login
+                            </h1>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Section: Design Block-->
+</header>
+
+<main>
+    <!-- Container for demo purpose -->
+    <div class="container my-5 py-5 shadow-5">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-10">
+                <form action="/login/user" method="post" enctype="multipart/form-data">
+                    <label for="username" class="form-label">Username</label>
+                    <input type="text" name="username" id="username" class="form-control" required />
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" name="password" id="password" class="form-control" required />
+                    <button class="btn btn-primary mt-3 w-50" type="submit">login</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <!-- Container for demo purpose -->
+</main>
+
+<%- include('partials/footer') -%>
+</body>
+<%- include('partials/scripts') -%>
+</html>

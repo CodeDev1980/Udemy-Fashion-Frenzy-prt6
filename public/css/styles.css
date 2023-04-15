@@ -1,0 +1,58 @@
+#navLogo2 {
+    display: none;
+}
+.gallery {
+    display: none;
+}
+.section {
+    background-image: linear-gradient(176deg, #DB8C44 70%, #ffffff calc(70% + 2px));
+    padding-top: 90px;
+    padding-bottom: 10px;
+}
+.line-white {
+    border: 1px solid white;
+    height: 2px;
+}
+.line {
+    border: 4px solid black;
+    width: 280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.intro-text {
+    color: #f4f4f4;
+}
+.btn-outline-brown {
+    border:1px solid saddlebrown;
+    color: black;
+}
+.btn-outline-brown:hover {
+    background-color: saddlebrown;
+    border:1px solid saddlebrown;
+    color: white;
+}
+@media(max-width: 990px){
+    #navLogo {
+        display: none;
+    }
+    #navLogo2 {
+        display: block;
+        padding-top: 14px;
+    }
+    .gallery {
+        display: block;
+    }
+}
+.bg-footer {
+    background-color: #DB8C44;
+    color: white!important;
+}
+.thankYou {
+    background: url('/images/messageSentBG.png')
+    no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}

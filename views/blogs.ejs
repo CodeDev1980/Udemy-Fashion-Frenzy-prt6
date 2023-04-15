@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header') -%>
+<body>
+<header>
+    <!-- Navbar -->
+    <%- include('partials/navBar') -%>
+    <!-- Navbar -->
+
+    <!--Section: Design Block-->
+    <section>
+        <div id="intro" class="bg-image" style="
+        background: url('https://images.yourstory.com/cs/wordpress/2017/02/52-Blog.jpg?w=752&fm=auto&ar=2:1&mode=crop&crop=faces')
+        no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+        height: 60vh;
+      ">
+            <div class="mask h-100" style="background-color: rgba(0, 0, 0, 0.6);">
+                <div class="container d-flex justify-content-center align-items-center h-100">
+                    <div class="row align-items-center">
+                        <div class="col-12 text-center p-3">
+
+                            <h1 class="text-white text-center display-1">
+                                Blogs
+                            </h1>
+                            <% if(loggedIn){ %>
+                                <a href="/create" class="btn btn-primary">Write A Blog</a>
+                            <% } %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Section: Design Block-->
+</header>
+
+<main>
+    <div class="container my-4 py-5">
+        <!--Section: Design Block-->
+        <section>
+            <div class="row">
+                <% for(i=0; i < blogs.length; i++){ %>
+                    <div class="col-md-12">
+                        <div class="row flex-row-reverse mb-5">
+                            <div class="col-md-8">
+                                <h5 class="fw-bold pb-1">
+                                    <a href="/post/<%= blogs[i]._id %>" class="text-reset"
+                                    ><%= blogs[i].title %></a
+                                    >
+                                </h5>
+                                <p class="small text-muted">
+                                    By <a href="#!" class="text-reset"><%= blogs[i].userid.username %></a> on <%= blogs[i].datePosted.toLocaleString() %>
+                                </p>
+                                <p>
+                                    <%= blogs[i].body.substring(0, 110) %> . . .
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="zoom rounded-5">
+                                    <a href="/post/<%= blogs[i]._id %>">
+                                        <img
+                                                class="w-100 rounded-5"
+                                                src="<%= blogs[i].image %>"
+                                                style="object-fit: cover; height: 148px"
+                                                alt="<%= blogs[i].title %>"
+                                        />
+                                        <div class="mask"></div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="divider-horizontal" style="margin-bottom: 3.5rem;">
+                    </div>
+                <% } %>
+            </div>
+        </section>
+        <!--Section: Design Block-->
+
+    </div>
+
+</main>
+
+<%- include('partials/footer') -%>
+</body>
+<%- include('partials/scripts') -%>
+</html>

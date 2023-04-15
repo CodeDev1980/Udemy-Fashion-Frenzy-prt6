@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header') -%>
+<body>
+  <header>
+    <%- include('partials/navBar') -%>
+  </header>
+  <%- include('pageParts/home-intro') -%>
+  <div class="container my-3 py-4">
+    <%- include('dbParts/home-blogs') -%>
+    <% for(i=0; i < blogs.length; i++){ %>
+      <%- include('dbParts/blogs-string') -%>
+    <% } %>
+    <%- include('pageParts/home-jumbotron') -%>
+    <%- include('dbParts/home-articles') -%>
+  </div>
+  <%- include('partials/footer') -%>
+  <%- include('partials/scripts') -%>
+</body>
+</html>

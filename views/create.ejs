@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header') -%>
+<body>
+<header>
+    <!-- Navbar -->
+    <%- include('partials/navBar') -%>
+    <!-- Navbar -->
+
+    <!--Section: Design Block-->
+    <section>
+        <div id="intro" class="bg-image" style="
+        background: url('https://media.istockphoto.com/id/1247171756/photo/working-home-concept.jpg?s=612x612&w=0&k=20&c=jPbejJ9gpbgFm5C_g4XYPDsfk5wuhJam68CkMmzXLkw=') no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+        height: 50vh;
+      ">
+            <div class="mask h-100" style="background-color: rgba(0, 0, 0, 0.6);">
+                <div class="container d-flex justify-content-center align-items-center h-100">
+                    <div class="row align-items-center">
+                        <div class="col-12 text-center p-3">
+
+                            <h1 class="text-white display-2">
+                                New Post
+                            </h1>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Section: Design Block-->
+</header>
+
+<main>
+    <!-- Container for demo purpose -->
+    <div class="container my-5 py-5 shadow-5">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-10">
+                <form action="/store/post" method="post" enctype="multipart/form-data">
+                    <label for="title" class="form-label">Post/Project Title</label>
+                    <input type="text" name="title" class="form-control" required id="title" >
+                    <label for="image" class="form-label">Post/Project Photo</label>
+                    <input type="file" name="image" class="form-control" accept="image/*" required id="image" >
+                    <label for="message" class="form-label">Blog Message</label>
+                    <textarea name="body" id="message" class="form-control" spellcheck="true" rows="6"></textarea>
+                    <button type="submit" class="btn btn-primary mt-3">submit post</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Container for demo purpose -->
+</main>
+
+<%- include('partials/footer') -%>
+</body>
+<%- include('partials/scripts') -%>
+</html>

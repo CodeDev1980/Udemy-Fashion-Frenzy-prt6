@@ -1,0 +1,72 @@
+<div class="container" style="margin-bottom: 60px;">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-lg-12">
+            <h2>Secure Messaging System Is With
+                <img src="/images/nodeImage.png" height="40" width="70" loading="lazy" alt="node.js">
+            </h2>
+            <form action="/form/send" method="post" class="card-body form" enctype="multipart/form-data">
+
+                <!-- Header -->
+                <h3 class="font-weight-bold dark-grey-text mt-4"><i class="fas fa-envelope pr-2 mr-1"></i>Write to us:</h3>
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-6">
+                        <div class="md-form mb-3">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" required name="yourName" id="name" class="form-control">
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-6">
+                        <div class="md-form mb-3">
+                            <label for="from" class="form-label">Your email</label>
+                            <input type="email" name="yourEmail" autocomplete="on" required id="from" class="form-control">
+
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-md-12">
+                        <div class="md-form mb-3">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" required name="yourSubject" id="subject" class="form-control">
+
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+
+                <!-- Grid row -->
+                <div class="row">
+
+                    <!-- Grid column -->
+                    <div class="col-md-12">
+                        <div class="md-form mb-0">
+                            <label for="yourMessage" class="form-label">Your message</label>
+                            <textarea name="yourMessage" required id="yourMessage" class="form-control mb-3 md-textarea" rows="6"></textarea>
+
+                            <button type="submit" value="submit" class="btn btn-primary btn-lg">
+                                Send Message <i class="far fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <!-- Grid column -->
+
+                </div>
+                <!-- Grid row -->
+
+
+            </form>
+        </div>
+    </div>
+</div>
